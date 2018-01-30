@@ -1,0 +1,60 @@
+@import './varibels';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before {
+        box-sizing: border-box;
+    }
+    &::after {
+        box-sizing: border-box;
+    }
+    & a {
+        text-decoration: none;
+        transition: .4s ease-in-out;
+    }
+}
+body{
+    background-color: #ffffff;
+    color: #4d4d4d;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+   
+}
+
+.wrapper{
+    max-width: 1250px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+//                                           BUTTON
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 9px 35px;
+    height: 42px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $clolrYellow;
+        border-color:  $clolrYellow;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+//         HEADERS
+h6 {
+    color: #0d0d0d;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+}

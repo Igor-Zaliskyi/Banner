@@ -1,0 +1,177 @@
+@import './varibels';
+
+%about-wrap-content__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none; // щоб розширення не мінялось
+    margin-right: 29px;
+    width: 125px;
+    height: 125px;
+    border: 2px solid $clolrYellow;
+    background-color: #ffffff;
+    border-radius: $br;
+    font-size: 40px;
+}
+
+
+.about {
+    @extend %sectionHeader;
+    & .about-wrap {
+        border-bottom: 2px solid #e6e6e6;
+        padding-bottom: 120px;
+        display: flex;
+        align-items: flex-start;
+        & .about-wrap-content {
+            margin-right: 60px;
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            & .about-wrap-content__icon {
+                @extend %about-wrap-content__icon;
+            }
+            & .about-wrap-content__text {
+                & h6 {
+                    margin-bottom: 25px;
+                }
+                & .about-text {
+                    color: #e74c3c;
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 40px;
+                }
+                & p {
+                    color: #737373;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+        & .about-wrap-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                & .about-wrap-img__icon {
+                    position: absolute;
+                    font-size: 32px;
+                }
+        }
+    }
+
+    // SKILLS
+
+    & .box-skills {
+        display: flex;
+        align-content: space-between;
+        margin-top: 124px;
+        margin-right: 10px;
+        & .box-skills-img{
+            padding-right: 50px;
+            text-align: right;
+            img {
+                display: inline-block;
+            }
+        }
+        & .box-skills-content{
+            margin-right: 14px;
+            display: grid;
+            grid-template-columns: 170px 387px  1fr;
+            margin-left: 20px;
+            padding-left: 45px;
+            & .box-scills-content__icon {
+                @extend %about-wrap-content__icon;
+            }
+            & .box-scills-content__text{
+                & h6 {
+                    margin-bottom: 25px;
+                }
+            }
+            & .box-bars {
+                margin-top: 60px;
+                grid-row-start: 2;
+                display: block;
+                width: 553px;
+             
+             & .bars {
+                margin-bottom: 34px;
+                 & .bars-title {
+                    margin-bottom: 14px;
+                    color: #0d0d0d;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    & span {
+                        font-weight: 400;
+                    }
+                    & procent {
+                        font-weight: 300;
+                    }
+                 }
+                 & .bars-line {
+                     height: 10px;
+                     background-image: linear-gradient(to right, #f39c12 0%, #e6e6e6 88%, #e6e6e6 100%);
+                     & div {
+                     }
+                 }
+             }
+         }
+        }
+    }
+
+}
+
+// quote
+
+.box-quote {
+    text-align: center;
+    color: #ffffff;
+    padding: 250px 0;
+    background-size: cover;
+    background: url("../images/quote-bg.png") no-repeat center top;
+    & .quote {
+        & .quote__text {
+            font-family: "Open Sans";
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 60px;
+            position: relative;
+            padding: 0 60px;
+            margin-bottom: 33px;
+            &::after,
+              &::before {
+                content: '“';
+                position: absolute;
+                display: block;
+                font-size: 110px;
+                font-weight: 700;
+                line-height: 60px;
+                top: 0;
+              }
+            &::after {
+                right: 0;
+                transform: rotate(180deg);
+                top: -28px;
+            }
+            &::before {
+                left: 0;
+                top: 15px;
+            }
+        }
+        & .quote__autor {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            &::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 4px;
+                margin: 0 auto 20px ;
+                background-color: #f39c12;
+            }
+        }
+    }
+}
